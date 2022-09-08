@@ -102,7 +102,7 @@ p {
   main {
     width: 500px;
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 40% 60%;
     grid-template-rows: auto auto auto auto;
     grid-template-areas: 
     "status name"
@@ -114,11 +114,18 @@ p {
     align-items: center;
   }
   #brand {
-    display: block;
+    display:flex;
     grid-area: brand;
+  }
+  #brand > p {
+    border-left: 5px solid green;
+    padding: 0 10px;
+    margin: 0;
   }
   #status {
     grid-area: status;
+    justify-content: left;
+    padding: 5px;
   }
   #img-container {
     grid-area: img;
@@ -129,5 +136,22 @@ p {
   }
   #offer{
     grid-area: offer;
+  }
+  #name{
+    font-size: 25px;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+  }
+  
+  h1,
+  #occupation,
+  #brand,
+  #offer{
+    background-color: lightgray;
+    font-size: 15px;
+    height: 100%;
+    padding-left: 10px;
+    margin: 0;
   }
 }
