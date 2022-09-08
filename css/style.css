@@ -101,5 +101,33 @@ p {
 @media only screen and (min-width: 768px){
   main {
     width: 500px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    "status name"
+    "img occupation"
+    "img brand"
+    "contact offer";
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+  }
+  #brand {
+    display: block;
+    grid-area: brand;
+  }
+  #status {
+    grid-area: status;
+  }
+  #img-container {
+    grid-area: img;
+    margin: 20px;
+  }
+  #contact {
+    grid-area: contact;
+  }
+  #offer{
+    grid-area: offer;
   }
 }
